@@ -1,0 +1,1 @@
+Profe si revisas esto el viernes 11/09/2026 que no creo, esta imcompleto si pero todo el fincho le voy a meter re duro asi que ya veremos como queda de pro player mi portafolio -- Gracias 
