@@ -292,3 +292,87 @@ section {
     box-shadow: 0 0 10px rgba(220, 20, 60, 0.7), inset -2px -2px 0px rgba(0,0,0,0.6);
     border-color: #8b0000;
 }
+/* --- EXPERIENCIA Y ESTUDIOS (Línea de tiempo) --- */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+    border-left: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.timeline-item {
+    background-color: var(--surface-color);
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateX(10px); /* Pequeño salto hacia la derecha al pasar el mouse */
+    border-color: var(--accent-color);
+}
+
+/* El puntito en la línea de tiempo */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: -39px; /* Alineado exacto con el borde izquierdo */
+    width: 20px;
+    height: 20px;
+    background-color: var(--accent-color);
+    border: 4px solid var(--bg-color);
+    border-radius: 50%;
+}
+
+/* --- CONTACTO --- */
+.contact-section {
+    background-color: var(--bg-color);
+}
+
+.contact-form-container {
+    background-color: var(--surface-color);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Estilo de los inputs oscuros */
+.custom-input {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    padding: 12px 15px;
+}
+
+.custom-input:focus {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-color: var(--accent-color);
+    box-shadow: none;
+    color: var(--text-primary);
+}
+
+/* Cuadrícula de Redes Sociales */
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+/* Los íconos cuadrados */
+.social-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    background-color: var(--surface-color);
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 12px; /* Cuadrados con bordes ligeramente redondeados */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.social-box:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    transform: translateY(-5px);
+}
