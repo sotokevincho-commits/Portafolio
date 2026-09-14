@@ -27,20 +27,6 @@
                         <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
                         <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-                        <!-- Interruptor estilo Palanca de Redstone -->
-                        <li class="nav-item ms-3 d-flex align-items-center">
-                            <div class="d-flex align-items-center gap-2 redstone-wrapper">
-                                <span class="redstone-text d-none d-lg-inline">Activar Circuito</span>
-                                <div class="redstone-lever-container" title="Activar/Desactivar Circuito">
-                                    <input type="checkbox" id="theme-toggle" class="lever-checkbox" checked>
-                                    <label for="theme-toggle" class="lever-base">
-                                        <span class="lever-stick">
-                                            <span class="lever-knob"></span>
-                                        </span>
-                                    </label>
-                                </div>
-                            </div>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -50,14 +36,6 @@
     <main>
         <!-- SECCIÓN 1: INICIO (Hero) -->
         <section id="inicio" class="hero-section position-relative d-flex align-items-center vh-100 overflow-hidden">
-
-            <!-- CONTENEDOR DE FONDO ABSOLUTO (Logos) -->
-            <div class="tech-background-wrapper">
-                <div class="tech-bg bg-java">Java</div>
-                <div class="tech-bg bg-js">JS</div>
-                <div class="tech-bg bg-postgres">PostgreSQL</div>
-            </div>
-
             <div class="container position-relative z-1">
                 <div class="row align-items-center">
 
@@ -77,7 +55,7 @@
                     <div class="col-lg-6 d-flex justify-content-center">
                         <div class="hero-image-container">
                             <!-- Recuerda poner el nombre de tu imagen real aquí -->
-                            <img src="img/fotoavatar.png" alt="Kevin Soto - Full Stack Developer"
+                            <img src="img/imagenportada.png" alt="Kevin Soto - Full Stack Developer"
                                 class="img-fluid silueta-img">
                         </div>
                     </div>
@@ -115,7 +93,7 @@
                         </p>
                         <div class="d-flex gap-3 justify-content-center justify-content-lg-start mt-4">
                             <a href="#contacto" class="btn btn-outline-success rounded-pill px-4">Contactar</a>
-                            <a href="#" class="btn btn-outline-light rounded-pill px-4">Descargar CV</a>
+                            <a href="docs/CV_Kevin_Soto_FullStack.pdf" class="btn btn-outline-light rounded-pill px-4">Descargar CV</a>
                         </div>
                     </div>
                 </div>
@@ -127,143 +105,213 @@
             <div class="container mt-5">
                 <h2 class="display-5 fw-bold mb-5 text-center">Proyectos en <span class="text-accent">Curso</span></h2>
 
+                <!-- Cambiamos a col-lg-4 para que quepan 3 tarjetas perfectamente alineadas -->
                 <div class="row g-4 justify-content-center">
 
-                    <!-- Proyecto 1: Cancheros FC -->
-                    <div class="col-lg-5 col-md-6">
+                    <!-- Proyecto 1: Cancheros -->
+                    <div class="col-lg-4 col-md-6">
                         <div class="card h-100 project-card shadow-lg p-4">
                             <div class="card-body d-flex flex-column p-0">
                                 <h3 class="card-title fw-bold text-white mb-3">Cancheros</h3>
                                 <p class="card-text text-secondary mb-4">
-                                    Sistema web diseñado para la reserva de canchas sintéticas. El desarrollo actual
-                                    está enfocado en la estructuración, maquetación e interactividad del apartado
-                                    "Quiénes somos".
+                                    Sistema web diseñado para la reserva de canchas sintéticas. Enfocado en la
+                                    estructuración, maquetación e interactividad del frontend y backend en Java.
                                 </p>
                                 <div class="mb-4">
-                                    <span class="badge tech-badge me-1">HTML</span>
-                                    <span class="badge tech-badge me-1">CSS</span>
-                                    <span class="badge tech-badge me-1">JavaScript</span>
-                                    <span class="badge tech-badge">Bootstrap</span>
+                                    <span class="badge tech-badge me-1">HTML/CSS/JS</span>
+                                    <span class="badge tech-badge">Spring Boot</span>
                                 </div>
-                                <div class="mt-auto">
-                                    <span class="text-accent fw-bold" style="font-size: 0.9rem;">
-                                        🚀 Proyecto desarrollado en generation
-                                    </span>
+                                <div class="mt-auto pt-3 border-top border-secondary border-opacity-25">
+                                    <a href="#" target="_blank" class="text-accent text-decoration-none fw-bold"
+                                        style="font-size: 0.95rem;">
+                                        🔗 Ver repositorio <span class="fs-5">→</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Proyecto 2: Parking Master -->
-                    <div class="col-lg-5 col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <div class="card h-100 project-card shadow-lg p-4">
                             <div class="card-body d-flex flex-column p-0">
                                 <h3 class="card-title fw-bold text-white mb-3">Parking Master</h3>
                                 <p class="card-text text-secondary mb-4">
-                                    Software integral de administración de parqueaderos. Incluye el modelado lógico de
-                                    datos, registro de vehículos, gestión de reservas y control de pagos.
+                                    Software integral de administración de parqueaderos. Modelado lógico de datos,
+                                    registro de vehículos, y control automatizado de pagos.
                                 </p>
                                 <div class="mb-4">
                                     <span class="badge tech-badge me-1">Java</span>
                                     <span class="badge tech-badge me-1">Spring Boot</span>
                                     <span class="badge tech-badge">PostgreSQL</span>
                                 </div>
-                                <div class="mt-auto">
-                                    <span class="text-accent fw-bold" style="font-size: 0.9rem;">
-                                        🚀 Proyecto desarrollado en generation
+                                <div class="mt-auto pt-3 border-top border-secondary border-opacity-25">
+                                    <a href="#" target="_blank" class="text-accent text-decoration-none fw-bold"
+                                        style="font-size: 0.95rem;">
+                                        🔗 Ver repositorio <span class="fs-5">→</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 3: Organizador de Tareas -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 project-card shadow-lg p-4">
+                            <div class="card-body d-flex flex-column p-0">
+                                <h3 class="card-title fw-bold text-white mb-3">Task Planner</h3>
+                                <p class="card-text text-secondary mb-4">
+                                    Dashboard web personal para gestión de tareas. Cuenta con calendario interactivo,
+                                    filtrado por prioridades y persistencia de datos mediante Local Storage.
+                                </p>
+                                <div class="mb-4">
+                                    <span class="badge tech-badge me-1">JavaScript</span>
+                                    <span class="badge tech-badge me-1">HTML DOM</span>
+                                    <span class="badge tech-badge">CSS</span>
+                                </div>
+                                <div class="mt-auto pt-3 border-top border-secondary border-opacity-25">
+                                    <a href="https://sotokevincho-commits.github.io/proyecto-personal/" target="_blank" class="text-accent text-decoration-none fw-bold"
+                                        style="font-size: 0.95rem;">
+                                        🔗 Ver proyecto desplegado <span class="fs-5">→</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: EXPERIENCIA Y ESTUDIOS (Línea de tiempo tech) -->
+        <section id="experiencia" class="experience-section py-5">
+            <div class="container mt-5">
+                <h2 class="display-5 fw-bold mb-5 text-center">Trayectoria <span class="text-accent">Profesional</span>
+                </h2>
+
+                <div class="horizontal-timeline-container">
+                    <div class="timeline-track"></div>
+                    <div class="timeline-items">
+
+                        <!-- 2024 -->
+                        <div class="h-timeline-item">
+                            <div class="timeline-node"></div>
+                            <div class="h-timeline-content">
+                                <span class="tech-date">2024 - En curso</span>
+                                <h4 class="fw-bold text-white mb-1">Ingeniería de Sistemas</h4>
+                                <h6 class="text-accent mb-3">Politécnico Grancolombiano</h6>
+                                <p class="text-secondary mb-0">Inicio de mi formación universitaria. Adquisición de
+                                    bases sólidas en ciencias de la computación, arquitectura de software y pensamiento
+                                    algorítmico.</p>
+                            </div>
+                        </div>
+
+                        <!-- 2026 (Doble titulación) -->
+                        <div class="h-timeline-item">
+                            <div class="timeline-node"></div>
+                            <div class="h-timeline-content">
+                                <span class="tech-date">2026 - En curso</span>
+                                <h4 class="fw-bold text-white mb-1">Ing. Ciencia de Datos & ADSO</h4>
+                                <h6 class="text-accent mb-3">Politécnico Grancolombiano | SENA</h6>
+                                <p class="text-secondary mb-0">Para complementar mi perfil en Sistemas, 
+                                    inicié mi segunda carrera profesional enfocada en el modelado de datos, 
+                                    cursada en paralelo con el tecnólogo en Análisis y Desarrollo de Software. 
+                                    Un enfoque dual entre análisis de información y construcción de software.</p>
+                            </div>
+                        </div>
+
+                        <!-- Bootcamp (A punto de terminar) -->
+                        <div class="h-timeline-item">
+                            <div class="timeline-node"></div>
+                            <div class="h-timeline-content">
+                                <span class="tech-date">2026 - Finalizado</span>
+                                <h4 class="fw-bold text-white mb-1">Bootcamp Java Full Stack</h4>
+                                <h6 class="text-accent mb-3">Generation</h6>
+                                <p class="text-secondary mb-0">Inmersión intensiva empresarial. Desarrollo de APIs REST
+                                    con Spring Boot, PostgreSQL, metodologías ágiles e integración frontend.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 5: CONTACTO (Estilo Terminal Tech) -->
+        <section id="contacto" class="contact-section py-5">
+            <div class="container mt-5 mb-5">
+                <h2 class="display-5 fw-bold mb-5 text-center">Inicializar <span class="text-accent">Conexión</span>
+                </h2>
+
+                <div class="row g-4 align-items-center justify-content-center">
+
+                    <!-- Terminal Interactiva (Izquierda) -->
+                    <div class="col-lg-6">
+                        <div class="terminal-window shadow-lg">
+                            <div class="terminal-header d-flex align-items-center px-3">
+                                <span class="dot bg-danger"></span>
+                                <span class="dot bg-warning ms-2"></span>
+                                <span class="dot bg-success ms-2"></span>
+                                <span class="ms-3 text-secondary font-monospace" style="font-size: 0.8rem;">guest@ksoto:
+                                    ~</span>
+                            </div>
+                            <div class="terminal-body p-4 font-monospace">
+                                <p class="mb-2"><span class="text-accent">guest@ksoto</span>:~$ ./contact.sh --status
+                                </p>
+                                <p class="text-secondary mb-3">> Obteniendo información del desarrollador...</p>
+                                <p class="text-info mb-1">{</p>
+                                <p class="ms-3 mb-1 text-white">"disponibilidad": <span
+                                        class="text-success">"Activa"</span>,</p>
+                                <p class="ms-3 mb-1 text-white">"ubicación": <span class="text-warning">"Bogotá,
+                                        Colombia"</span>,</p>
+                                <p class="ms-3 mb-1 text-white">"café_en_sistema": <span
+                                        class="text-warning">"98%"</span></p>
+                                <p class="text-info mb-3">}</p>
+                                <p class="mb-0"><span class="text-accent">guest@ksoto</span>:~$ <span
+                                        class="cursor-blink">_</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enlaces de Contacto (Derecha, estilo tarjetas de proyecto) -->
+                    <div class="col-lg-5">
+                        <div class="d-flex flex-column gap-3">
+
+                            <!-- GitHub -->
+                            <div
+                                class="contact-card p-3 px-4 rounded-3 border border-secondary border-opacity-25 bg-dark">
+                                <h4 class="fw-bold text-white mb-2">GitHub</h4>
+                                <div class="pt-2 border-top border-secondary border-opacity-25">
+                                    <a href="https://github.com/sotokevincho-commits" target="_blank"
+                                        class="text-accent text-decoration-none fw-bold" style="font-size: 0.95rem;">
+                                        🔗 Explorar repositorios <span class="fs-5">→</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- LinkedIn -->
+                            <div
+                                class="contact-card p-3 px-4 rounded-3 border border-secondary border-opacity-25 bg-dark">
+                                <h4 class="fw-bold text-white mb-2">LinkedIn</h4>
+                                <div class="pt-2 border-top border-secondary border-opacity-25">
+                                    <a href="https://www.linkedin.com/in/kevin-andres-soto-lombana/" target="_blank"
+                                        class="text-accent text-decoration-none fw-bold" style="font-size: 0.95rem;">
+                                        🔗 Conectar en la red <span class="fs-5">→</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Correo (Copiar al portapapeles) -->
+                            <div class="contact-card p-3 px-4 rounded-3 border border-secondary border-opacity-25 bg-dark"
+                                style="cursor: pointer;" id="btn-copiar-correo">
+                                <h4 class="fw-bold text-white mb-2">Correo Electrónico</h4>
+                                <div class="pt-2 border-top border-secondary border-opacity-25">
+                                    <span class="text-accent fw-bold" style="font-size: 0.95rem;" id="texto-correo">
+                                        🔗 Copiar dirección de correo <span class="fs-5">→</span>
                                     </span>
                                 </div>
                             </div>
-                        </div>
-                    </div>
 
-                </div>
-            </div>
-        </section>
-
-        <!-- SECCIÓN 4: EXPERIENCIA Y ESTUDIOS -->
-        <section id="experiencia" class="experience-section py-5">
-            <div class="container mt-5">
-                <h2 class="display-5 fw-bold mb-5 text-center">Trayectoria <span class="text-accent">Profesional</span></h2>
-                
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="timeline">
-                            
-                            <!-- Ítem 1: Bootcamp -->
-                            <div class="timeline-item shadow-sm p-4 rounded-4 mb-4">
-                                <span class="badge bg-success mb-2">Actualidad</span>
-                                <h4 class="fw-bold text-white mb-1">Bootcamp Java Full Stack</h4>
-                                <h6 class="text-accent mb-3">Generation</h6>
-                                <p class="text-secondary mb-0">
-                                    Formación intensiva orientada al desarrollo de aplicaciones empresariales. Creación de APIs REST con Spring Boot, integración con bases de datos relacionales y desarrollo de interfaces de usuario.
-                                </p>
-                            </div>
-
-                            <!-- Ítem 2: SENA & Universidad -->
-                            <div class="timeline-item shadow-sm p-4 rounded-4 mb-4">
-                                <span class="badge bg-success mb-2">En curso</span>
-                                <h4 class="fw-bold text-white mb-1">Doble Programa Universitario & Tecnólogo</h4>
-                                <h6 class="text-accent mb-3">Politécnico Grancolombiano | SENA</h6>
-                                <p class="text-secondary mb-0">
-                                    Estudiante activo del doble programa en Ingeniería de Sistemas e Ingeniería en Ciencia de Datos. Simultáneamente cursando el programa tecnológico ADSO (Análisis y Desarrollo de Software), desarrollando una sólida base en algoritmia y modelado de datos.
-                                </p>
-                            </div>
-
-                            <!-- Ítem 3: Experiencia Previa -->
-                            <div class="timeline-item shadow-sm p-4 rounded-4">
-                                <span class="badge bg-secondary mb-2">Experiencia Previa</span>
-                                <h4 class="fw-bold text-white mb-1">Analista de Cartera</h4>
-                                <h6 class="text-accent mb-3">Sector Bancario y Telecomunicaciones</h6>
-                                <p class="text-secondary mb-0">
-                                    Gestión, análisis y control de cartera. Esta experiencia me permitió desarrollar habilidades clave en la resolución de problemas, atención al detalle y manejo de situaciones críticas, competencias que hoy aplico en la lógica de programación y el diseño de bases de datos.
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECCIÓN 5: CONTACTO -->
-        <section id="contacto" class="contact-section py-5">
-            <div class="container mt-5">
-                <div class="row justify-content-center align-items-center g-5">
-                    
-                    <!-- Redes Sociales (Iconos Cuadrados) -->
-                    <div class="col-lg-4 text-center text-lg-start">
-                        <h2 class="display-5 fw-bold mb-4">Hablemos</h2>
-                        <p class="text-secondary fs-5 mb-5">
-                            ¿Tienes un proyecto en mente o buscas sumar talento a tu equipo? Contáctame a través de mis redes o envíame un mensaje directo.
-                        </p>
-                        
-                        <div class="social-grid">
-                            <a href="#" class="social-box">GitHub</a>
-                            <a href="#" class="social-box">LinkedIn</a>
-                            <a href="#" class="social-box">Gmail</a>
-                            <a href="#" class="social-box">WhatsApp</a>
-                        </div>
-                    </div>
-
-                    <!-- Formulario -->
-                    <div class="col-lg-6">
-                        <div class="contact-form-container p-4 p-md-5 rounded-4 shadow-lg">
-                            <form>
-                                <div class="mb-4">
-                                    <label class="form-label text-secondary">Nombre</label>
-                                    <input type="text" class="form-control custom-input" placeholder="Tu nombre">
-                                </div>
-                                <div class="mb-4">
-                                    <label class="form-label text-secondary">Correo</label>
-                                    <input type="email" class="form-control custom-input" placeholder="tu@correo.com">
-                                </div>
-                                <div class="mb-4">
-                                    <label class="form-label text-secondary">Mensaje</label>
-                                    <textarea class="form-control custom-input" rows="4" placeholder="¿En qué puedo ayudarte?"></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-success btn-lg w-100 rounded-pill">Enviar Mensaje</button>
-                            </form>
                         </div>
                     </div>
 

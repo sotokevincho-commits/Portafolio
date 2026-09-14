@@ -51,50 +51,6 @@ section {
 
 .silueta-img:hover { transform: scale(1.02); }
 
-/* --- LOGOS TÉCNICOS DE FONDO --- */
-.tech-background-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    pointer-events: none; 
-    overflow: hidden;
-}
-
-.tech-bg {
-    position: absolute; 
-    font-weight: bold;
-    color: transparent;
-    -webkit-text-stroke: 2px;
-    opacity: 0.15;
-    user-select: none;
-}
-
-.bg-java {
-    top: 15%;
-    left: 5%;
-    font-size: 150px;
-    -webkit-text-stroke-color: var(--tech-java);
-    transform: rotate(-10deg);
-}
-
-.bg-js {
-    bottom: 5%;
-    left: 45%;
-    font-size: 220px;
-    -webkit-text-stroke-color: var(--tech-js);
-}
-
-.bg-postgres {
-    top: 30%;
-    right: 5%;
-    font-size: 150px;
-    -webkit-text-stroke-color: var(--tech-postgres);
-    transform: rotate(15deg);
-}
-
 /* --- ACERCA DE MÍ --- */
 .about-section { background-color: var(--bg-color); }
 
@@ -143,236 +99,138 @@ section {
     font-weight: 500;
     padding: 6px 12px;
 }
-/* --- PALANCA DE REDSTONE --- */
-.redstone-lever-container {
+/* --- TIMELINE HORIZONTAL PERSONALIZADO (Estilo Circuito) --- */
+.horizontal-timeline-container {
     position: relative;
-    width: 30px;
-    height: 40px;
-    margin-top: -15px; /* Ajuste para centrar en el navbar */
+    width: 100%;
+    padding: 40px 0;
+    overflow-x: auto; 
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-color) transparent;
 }
 
-.lever-checkbox {
-    display: none; /* Ocultamos el checkbox tradicional */
-}
-
-/* Base (Estilo Cobblestone/Piedra) */
-.lever-base {
-    display: block;
-    width: 26px;
-    height: 22px;
-    background-color: #666;
-    border: 2px solid #333;
-    border-radius: 2px;
+.timeline-track {
     position: absolute;
-    bottom: 0;
-    left: 2px;
-    cursor: pointer;
-    box-shadow: inset -2px -2px 0px rgba(0,0,0,0.5), inset 2px 2px 0px rgba(255,255,255,0.2);
-    transition: all 0.3s ease;
+    top: 52px; /* Alineada con los nodos */
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, rgba(76, 175, 80, 0.1) 0%, var(--accent-color) 50%, rgba(76, 175, 80, 0.1) 100%);
+    z-index: 1;
 }
 
-/* El palo de madera */
-.lever-stick {
-    display: block;
-    width: 8px;
-    height: 28px;
-    background-color: #8b5a2b;
-    border: 2px solid #3e2311;
-    position: absolute;
-    bottom: 10px;
-    left: 7px;
-    transform-origin: bottom center;
-    transform: rotate(40deg); /* Posición inicial (Modo Oscuro) */
-    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: inset -1px -1px 0px rgba(0,0,0,0.5);
-}
-
-/* --- ANIMACIÓN AL HACER CLIC --- */
-/* Cuando pasamos a Modo Claro (Checkbox desmarcado) */
-.lever-checkbox:not(:checked) + .lever-base .lever-stick {
-    transform: rotate(-40deg); 
-}
-
-/* Resplandor simulando energía de redstone en modo oscuro */
-.lever-checkbox:checked + .lever-base {
-    box-shadow: 0 0 12px rgba(255, 50, 50, 0.6), inset -2px -2px 0px rgba(0,0,0,0.5);
-    border-color: #8b0000;
-}
-
-/* --- VARIABLES MODO CLARO --- */
-/* Cuando el HTML cambie a modo claro, estos colores sobrescribirán a los oscuros */
-[data-bs-theme="light"] {
-    --bg-color: #F8F9FA; 
-    --surface-color: #FFFFFF; 
-    --text-primary: #212529; 
-    --text-secondary: #6C757D; 
-    --accent-color: #198754; 
-    
-    /* Logos de fondo un poco más visibles para que no se pierdan en el blanco */
-    --tech-js: rgba(247, 223, 30, 0.4);
-    --tech-java: rgba(0, 115, 150, 0.2);
-    --tech-postgres: rgba(51, 103, 145, 0.2);
-}
-/* --- ESTILO MEJORADO PALANCA DE MINECRAFT --- */
-.redstone-wrapper {
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 4px 10px;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.redstone-text {
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    font-weight: 500;
-    letter-spacing: 0.5px;
-}
-
-.redstone-lever-container {
-    position: relative;
-    width: 36px;
-    height: 44px;
-}
-
-.lever-checkbox {
-    display: none;
-}
-
-/* Base de piedra / adoquín */
-.lever-base {
-    display: block;
-    width: 32px;
-    height: 24px;
-    background-color: #555555;
-    border: 2px solid #222222;
-    border-radius: 3px;
-    position: absolute;
-    bottom: 0;
-    left: 2px;
-    cursor: pointer;
-    box-shadow: inset -2px -2px 0px rgba(0,0,0,0.6), inset 2px 2px 0px rgba(255,255,255,0.2);
-    transition: all 0.2s ease;
-}
-
-/* Palo de madera de la palanca */
-.lever-stick {
-    display: block;
-    width: 6px;
-    height: 30px;
-    background-color: #7f5236;
-    border: 1px solid #3c2415;
-    position: absolute;
-    bottom: 10px;
-    left: 11px;
-    transform-origin: bottom center;
-    transform: rotate(35deg); /* Inclinada a la derecha (Modo Oscuro) */
-    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Perilla o cabeza de la palanca */
-.lever-knob {
-    content: '';
-    position: absolute;
-    top: -4px;
-    left: -3px;
-    width: 10px;
-    height: 8px;
-    background-color: #b58d5a;
-    border: 1px solid #3c2415;
-    border-radius: 2px;
-}
-
-/* Animación: Cuando se apaga el circuito (Modo Claro) la palanca se inclina a la izquierda */
-.lever-checkbox:not(:checked) + .lever-base .lever-stick {
-    transform: rotate(-35deg); 
-}
-
-/* Resplandor rojo de redstone en la base cuando está en modo oscuro */
-.lever-checkbox:checked + .lever-base {
-    box-shadow: 0 0 10px rgba(220, 20, 60, 0.7), inset -2px -2px 0px rgba(0,0,0,0.6);
-    border-color: #8b0000;
-}
-/* --- EXPERIENCIA Y ESTUDIOS (Línea de tiempo) --- */
-.timeline {
-    position: relative;
-    padding-left: 2rem;
-    border-left: 3px solid rgba(255, 255, 255, 0.1);
-}
-
-.timeline-item {
-    background-color: var(--surface-color);
-    position: relative;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: transform 0.3s ease;
-}
-
-.timeline-item:hover {
-    transform: translateX(10px); /* Pequeño salto hacia la derecha al pasar el mouse */
-    border-color: var(--accent-color);
-}
-
-/* El puntito en la línea de tiempo */
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    top: 30px;
-    left: -39px; /* Alineado exacto con el borde izquierdo */
-    width: 20px;
-    height: 20px;
-    background-color: var(--accent-color);
-    border: 4px solid var(--bg-color);
-    border-radius: 50%;
-}
-
-/* --- CONTACTO --- */
-.contact-section {
-    background-color: var(--bg-color);
-}
-
-.contact-form-container {
-    background-color: var(--surface-color);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-/* Estilo de los inputs oscuros */
-.custom-input {
-    background-color: rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--text-primary);
-    padding: 12px 15px;
-}
-
-.custom-input:focus {
-    background-color: rgba(0, 0, 0, 0.3);
-    border-color: var(--accent-color);
-    box-shadow: none;
-    color: var(--text-primary);
-}
-
-/* Cuadrícula de Redes Sociales */
-.social-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-}
-
-/* Los íconos cuadrados */
-.social-box {
+.timeline-items {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 80px;
-    background-color: var(--surface-color);
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 12px; /* Cuadrados con bordes ligeramente redondeados */
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: all 0.3s ease;
+    justify-content: space-between;
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+    min-width: 900px; /* Fuerza el scroll en móviles para no aplastar el diseño */
+    padding-bottom: 20px;
 }
 
-.social-box:hover {
+.h-timeline-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.timeline-node {
+    width: 24px;
+    height: 24px;
+    background-color: var(--bg-color);
+    border: 4px solid var(--accent-color);
+    border-radius: 50%;
+    margin-bottom: 25px;
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.h-timeline-item:hover .timeline-node {
+    transform: scale(1.3);
+    box-shadow: 0 0 25px var(--accent-color);
     background-color: var(--accent-color);
-    color: var(--bg-color);
+}
+
+.h-timeline-content {
+    background-color: var(--surface-color);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 25px 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.h-timeline-item:hover .h-timeline-content {
+    border-color: var(--accent-color);
     transform: translateY(-5px);
+}
+
+.tech-date {
+    display: inline-block;
+    background-color: rgba(76, 175, 80, 0.1);
+    color: var(--accent-color);
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    border: 1px solid rgba(76, 175, 80, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- CONTACTO (Estilo Terminal) --- */
+.contact-section {
+    background-color: transparent;
+}
+
+/* Ventana de Consola */
+.terminal-window {
+    background-color: rgba(10, 10, 10, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+}
+
+.terminal-header {
+    background-color: #1e1e1e;
+    height: 35px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Efecto del cursor parpadeante de la terminal */
+.cursor-blink {
+    display: inline-block;
+    width: 8px;
+    height: 15px;
+    background-color: var(--text-primary);
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Tarjetas de enlaces de contacto */
+.contact-card {
+    background-color: var(--surface-color) !important;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateX(10px); /* Deslizamiento moderno hacia la derecha */
+    border-color: var(--accent-color) !important;
 }
