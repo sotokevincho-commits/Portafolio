@@ -31,29 +31,52 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: transparent !important; /* Permite ver el fondo del body en todas las secciones */
 }
 
 /* --- UTILIDADES Y TEXTOS --- */
 .text-accent { color: var(--accent-color); }
 .text-secondary { color: var(--text-secondary); }
 
-/* --- HERO SECTION --- */
-.hero-section {
-    padding-top: 80px; 
+/* --- HERO SECTION: FOTO EN CÍRCULO --- */
+.hero-image-container {
+    width: 320px;
+    height: 320px;
+    background: linear-gradient(135deg, var(--surface-color), rgba(76, 175, 80, 0.15));
+    border: 4px solid rgba(76, 175, 80, 0.5); /* Borde sutil del color accent */
+    border-radius: 50%; /* Esto crea el círculo perfecto */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Alinea la foto abajo para que no se vea cortada flotando */
+    overflow: hidden; /* Oculta los brazos por fuera del círculo */
+    margin: 0 auto;
+    box-shadow: 0 0 25px rgba(76, 175, 80, 0.3);
 }
 
 .silueta-img {
-    max-height: 80vh;
+    max-height: 95%; /* Ajusta el tamaño de tu cuerpo dentro del círculo */
     object-fit: contain;
-    filter: drop-shadow(0px 0px 25px rgba(76, 175, 80, 0.4));
     transition: transform 0.3s ease;
+    /* Se quitó el filter: drop-shadow porque se vería raro cortado dentro del círculo */
 }
 
-.silueta-img:hover { transform: scale(1.02); }
+.silueta-img:hover { 
+    transform: scale(1.05); 
+}
+
+/* --- ESTILOS PARA IMÁGENES DE LAS TARJETAS (NUEVO) --- */
+.project-img {
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom: 2px solid var(--accent-color);
+}
 
 /* --- ACERCA DE MÍ --- */
-.about-section { background-color: var(--bg-color); }
-
+.about-section { 
+    background-color: transparent !important; 
+}
 .video-container {
     height: 400px;
     background-color: var(--surface-color);
@@ -233,4 +256,82 @@ section {
 .contact-card:hover {
     transform: translateX(10px); /* Deslizamiento moderno hacia la derecha */
     border-color: var(--accent-color) !important;
+}
+/* --- IDENTIDAD VISUAL (LOGO Y FIRMA) --- */
+.navbar-logo {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+    transform: scale(1.08);
+}
+
+.personal-signature {
+    height: 65px;
+    width: auto;
+    object-fit: contain;
+    filter: invert(1); /* Convierte el trazo negro en blanco brillante para el tema oscuro */
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.personal-signature:hover {
+    opacity: 1;
+}
+/* --- IDENTIDAD VISUAL EN NAVBAR --- */
+.navbar-logo {
+    height: 42px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.navbar-signature {
+    height: 38px; /* Tamaño optimizado para acompañar al logo sin recargar la barra */
+    width: auto;
+    object-fit: contain;
+    filter: invert(1); /* Pasa el trazo de negro a blanco */
+    opacity: 0.9;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-brand:hover .navbar-logo,
+.navbar-brand:hover .navbar-signature {
+    transform: scale(1.05);
+    opacity: 1;
+}
+/* --- FONDO DINÁMICO (RED DE NODOS / CONSTELACIÓN) --- */
+body {
+    background-color: #0d0d0d !important;
+    /* Mantenemos la cuadrícula sutil de fondo */
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* El lienzo se fija al fondo de toda la pantalla */
+#nodes-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* Permite interactuar con los botones y enlaces sin problema */
+    z-index: 0;
+}
+
+/* Aseguramos que las secciones se vean transparentes para mostrar los nodos */
+section {
+    background-color: transparent !important;
+}
+
+main {
+    position: relative;
+    z-index: 1;
 }

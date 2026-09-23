@@ -13,317 +13,342 @@
 
 <body>
 
-    <!-- NAVEGACIÓN -->
-    <header id="header">
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: var(--bg-color);">
+    <!-- Canvas para la red de nodos / constelación -->
+    <canvas id="nodes-canvas"></canvas>
+
+        <!-- NAVEGACIÓN -->
+        <header id="header">
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: var(--bg-color);">
+                <div class="container">
+                    <!-- Marca personal: Logo + Firma juntos -->
+                    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                        <img src="img/logo personal kevin soto.png" alt="Logo Kevin Soto" class="navbar-logo">
+                        <img src="img/Firma digital Kevin Soto.png" alt="Firma Kevin Soto" class="navbar-signature">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link" href="#acerca-de-mi">Acerca de Mí</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <!-- SECCIÓN 1: INICIO (Hero) -->
+            <section id="inicio"
+                class="hero-section position-relative d-flex align-items-center vh-100 overflow-hidden">
+                <div class="container position-relative z-1">
+                    <div class="row align-items-center">
+
+                        <!-- Textos y CTA -->
+                        <div class="col-lg-6 text-center text-lg-start mb-5 mb-lg-0">
+                            <p class="text-accent mb-1 fs-5">Hola, soy Kevin</p>
+                            <h1 class="display-4 fw-bold mb-3">Desarrollador <br> <span class="text-accent">Full
+                                    Stack</span></h1>
+                            <p class="text-secondary fs-5 mb-4 pe-lg-5">
+                                Construyendo soluciones lógicas y eficientes. Apasionado por el código limpio, desde
+                                bases de datos robustas hasta interfaces dinámicas.
+                            </p>
+                            <a href="#proyectos" class="btn btn-success btn-lg px-4 rounded-pill">Ver proyectos</a>
+                        </div>
+
+                        <!-- Silueta -->
+                        <div class="col-lg-6 d-flex justify-content-center">
+                            <div class="hero-image-container">
+                                <img src="img/imagenportada.png" alt="Kevin Soto - Full Stack Developer"
+                                    class="img-fluid silueta-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN 2: ACERCA DE MÍ -->
+            <section id="acerca-de-mi" class="about-section py-3">
+                <div class="container mt-3">
+                    <div class="row align-items-center">
+
+                        <!-- Video Placeholder -->
+                        <div class="col-lg-6 mb-4 mb-lg-0">
+                            <div
+                                class="video-container rounded-4 d-flex flex-column align-items-center justify-content-center shadow-lg overflow-hidden position-relative">
+                                <div class="play-btn mb-3">▶</div>
+                                <h4 class="fw-bold z-1">Conóceme Mejor</h4>
+                                <p class="text-secondary mb-0 z-1">Video de presentación (45s)</p>
+                            </div>
+                        </div>
+
+                        <!-- Texto unificado y reducido con jerarquía visual -->
+                        <div class="col-lg-6 ps-lg-5 text-center text-lg-start">
+                            <h2 class="display-6 fw-bold mb-3">Sobre <span class="text-accent">Mí</span></h2>
+                            <p class="text-secondary fs-6 mb-3">
+                                Soy un <strong>desarrollador Full Stack</strong> enfocado en resolver problemas
+                                complejos estructurando <strong>datos e interfaces eficientes</strong>. Me destaco por
+                                mi adaptabilidad, el <strong>aprendizaje continuo</strong> y el pensamiento lógico,
+                                habilidades que potencio incluso fuera del código mediante la resolución de puzzles y la
+                                creación de automatizaciones en videojuegos.
+                            </p>
+
+                            <!-- Firma Digital -->
+                            <div class="my-3 text-center text-lg-start">
+                                <img src="img/Firma digital Kevin Soto.png" alt="Firma Kevin Soto"
+                                    class="personal-signature">
+                            </div>
+
+                            <div class="d-flex gap-3 justify-content-center justify-content-lg-start mt-3">
+                                <a href="#contacto" class="btn btn-outline-success rounded-pill px-4">Contactar</a>
+                                <a href="docs/CV_Kevin_Soto_FullStack.pdf"
+                                    class="btn btn-outline-light rounded-pill px-4">Descargar CV</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN 3: PROYECTOS -->
+            <section id="proyectos" class="projects-section py-4">
+                <div class="container mt-3">
+                    <h2 class="display-6 fw-bold mb-5 text-center">Mis <span class="text-accent">Proyectos</span></h2>
+
+                    <div class="row g-4 justify-content-center">
+
+                        <!-- Proyecto 1: Cancheros -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card h-100 project-card shadow-lg border-0 bg-dark">
+                                <img src="img/cancherosimg.png" class="card-img-top project-img"
+                                    alt="Vista previa Cancheros">
+                                <div class="card-body d-flex flex-column p-4">
+                                    <h3 class="card-title fw-bold text-white mb-2 fs-5">Cancheros</h3>
+                                    <p class="card-text text-secondary mb-3" style="font-size: 0.9rem;">
+                                        Sistema web diseñado para reserva de canchas sintéticas. Interactividad frontend
+                                        y lógica backend.
+                                    </p>
+                                    <div class="mb-4">
+                                        <span class="badge tech-badge me-1">HTML/CSS/JS</span>
+                                        <span class="badge tech-badge">Spring Boot</span>
+                                    </div>
+                                    <div
+                                        class="mt-auto pt-3 border-top border-secondary border-opacity-25 d-flex gap-2">
+                                        <a href="https://github.com/Dylanfelipe01/Cancheros_Proyecto" target="_blank"
+                                            class="btn btn-outline-success btn-sm w-100 rounded-pill">Repositorio</a>
+                                        <a href="https://cancheros-proyecto.vercel.app/pages/auth/registro.html"
+                                            target="_blank" class="btn btn-success btn-sm w-100 rounded-pill">Demo</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Proyecto 2: Parking Master -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card h-100 project-card shadow-lg border-0 bg-dark">
+                                <img src="img/image.png" class="card-img-top project-img"
+                                    alt="Vista previa Parking Master">
+                                <div class="card-body d-flex flex-column p-4">
+                                    <h3 class="card-title fw-bold text-white mb-2 fs-5">Parking Master</h3>
+                                    <p class="card-text text-secondary mb-3" style="font-size: 0.9rem;">
+                                        Administración integral de parqueaderos. Registro de vehículos y control
+                                        automatizado de pagos.
+                                    </p>
+                                    <div class="mb-4">
+                                        <span class="badge tech-badge me-1">Java</span>
+                                        <span class="badge tech-badge me-1">Spring Boot</span>
+                                        <span class="badge tech-badge">PostgreSQL</span>
+                                    </div>
+                                    <div
+                                        class="mt-auto pt-3 border-top border-secondary border-opacity-25 d-flex gap-2">
+                                        <a href="#" target="_blank"
+                                            class="btn btn-outline-success btn-sm w-100 rounded-pill">Repositorio</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Proyecto 3: Organizador de Tareas -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card h-100 project-card shadow-lg border-0 bg-dark">
+                                <img src="img/task planer img.png" class="card-img-top project-img"
+                                    alt="Vista previa Task Planner">
+                                <div class="card-body d-flex flex-column p-4">
+                                    <h3 class="card-title fw-bold text-white mb-2 fs-5">Task Planner</h3>
+                                    <p class="card-text text-secondary mb-3" style="font-size: 0.9rem;">
+                                        Dashboard web personal para gestión de tareas con calendario y persistencia en
+                                        Local Storage.
+                                    </p>
+                                    <div class="mb-4">
+                                        <span class="badge tech-badge me-1">JavaScript</span>
+                                        <span class="badge tech-badge me-1">HTML DOM</span>
+                                        <span class="badge tech-badge">CSS</span>
+                                    </div>
+                                    <div
+                                        class="mt-auto pt-3 border-top border-secondary border-opacity-25 d-flex gap-2">
+                                        <a href="https://github.com/sotokevincho-commits/proyecto-personal "
+                                            target="_blank"
+                                            class="btn btn-outline-success btn-sm w-100 rounded-pill">Repositorio</a>
+                                        <a href="https://sotokevincho-commits.github.io/proyecto-personal/"
+                                            target="_blank"
+                                            class="btn btn-success btn-sm w-100 rounded-pill">Despliegue</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN 4: EXPERIENCIA -->
+            <section id="experiencia" class="experience-section py-5">
+                <div class="container mt-4">
+                    <h2 class="display-6 fw-bold mb-5 text-center">Trayectoria <span
+                            class="text-accent">Profesional</span></h2>
+
+                    <div class="horizontal-timeline-container">
+                        <div class="timeline-track"></div>
+                        <div class="timeline-items">
+
+                            <!-- 2024 -->
+                            <div class="h-timeline-item">
+                                <div class="timeline-node"></div>
+                                <div class="h-timeline-content">
+                                    <span class="tech-date">2024 - Presente</span>
+                                    <h4 class="fw-bold text-white mb-1 fs-5">Ingeniería de Sistemas</h4>
+                                    <h6 class="text-accent mb-3">Politécnico Grancolombiano</h6>
+                                    <p class="text-secondary mb-0" style="font-size: 0.9rem;">Formación universitaria
+                                        enfocada en ciencias de la computación, arquitectura de software y pensamiento
+                                        algorítmico.</p>
+                                </div>
+                            </div>
+
+                            <!-- 2026 -->
+                            <div class="h-timeline-item">
+                                <div class="timeline-node"></div>
+                                <div class="h-timeline-content">
+                                    <span class="tech-date">2026 - Presente</span>
+                                    <h4 class="fw-bold text-white mb-1 fs-5">Ing. Ciencia de Datos & ADSO</h4>
+                                    <h6 class="text-accent mb-3">Politécnico Grancolombiano | SENA</h6>
+                                    <p class="text-secondary mb-0" style="font-size: 0.9rem;">Enfoque dual cursado en
+                                        paralelo combinando modelado y análisis de información con construcción de
+                                        software.</p>
+                                </div>
+                            </div>
+
+                            <!-- Bootcamp -->
+                            <div class="h-timeline-item">
+                                <div class="timeline-node"></div>
+                                <div class="h-timeline-content">
+                                    <span class="tech-date">2026</span>
+                                    <h4 class="fw-bold text-white mb-1 fs-5">Bootcamp Java Full Stack</h4>
+                                    <h6 class="text-accent mb-3">Generation</h6>
+                                    <p class="text-secondary mb-0" style="font-size: 0.9rem;">Desarrollo intensivo de
+                                        APIs REST con Spring Boot, bases de datos relacionales, metodologías ágiles y
+                                        frontend.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN 5: CONTACTO -->
+            <section id="contacto" class="contact-section py-5">
+                <div class="container mt-5 mb-5">
+                    <h2 class="display-6 fw-bold mb-5 text-center">Inicializar <span class="text-accent">Conexión</span>
+                    </h2>
+
+                    <div class="row g-4 align-items-center justify-content-center">
+
+                        <div class="col-lg-6">
+                            <div class="terminal-window shadow-lg">
+                                <div class="terminal-header d-flex align-items-center px-3">
+                                    <span class="dot bg-danger"></span>
+                                    <span class="dot bg-warning ms-2"></span>
+                                    <span class="dot bg-success ms-2"></span>
+                                    <span class="ms-3 text-secondary font-monospace"
+                                        style="font-size: 0.8rem;">guest@ksoto: ~</span>
+                                </div>
+                                <div class="terminal-body p-4 font-monospace">
+                                    <p class="mb-2"><span class="text-accent">guest@ksoto</span>:~$ ./contact.sh
+                                        --status</p>
+                                    <p class="text-secondary mb-3">> Obteniendo información del desarrollador...</p>
+                                    <p class="text-info mb-1">{</p>
+                                    <p class="ms-3 mb-1 text-white">"disponibilidad": <span
+                                            class="text-success">"Activa"</span>,</p>
+                                    <p class="ms-3 mb-1 text-white">"ubicación": <span class="text-warning">"Bogotá,
+                                            Colombia"</span>,</p>
+                                    <p class="ms-3 mb-1 text-white">"café_en_sistema": <span
+                                            class="text-warning">"98%"</span></p>
+                                    <p class="text-info mb-3">}</p>
+                                    <p class="mb-0"><span class="text-accent">guest@ksoto</span>:~$ <span
+                                            class="cursor-blink">_</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5">
+                            <div class="d-flex flex-column gap-3">
+
+                                <div
+                                    class="contact-card p-3 px-4 rounded-3 border border-secondary border-opacity-25 bg-dark">
+                                    <h4 class="fw-bold text-white mb-2">GitHub</h4>
+                                    <div class="pt-2 border-top border-secondary border-opacity-25">
+                                        <a href="https://github.com/sotokevincho-commits" target="_blank"
+                                            class="text-accent text-decoration-none fw-bold"
+                                            style="font-size: 0.95rem;">
+                                            🔗 Explorar repositorios <span class="fs-5">→</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="contact-card p-3 px-4 rounded-3 border border-secondary border-opacity-25 bg-dark">
+                                    <h4 class="fw-bold text-white mb-2">LinkedIn</h4>
+                                    <div class="pt-2 border-top border-secondary border-opacity-25">
+                                        <a href="https://www.linkedin.com/in/kevin-andres-soto-lombana/" target="_blank"
+                                            class="text-accent text-decoration-none fw-bold"
+                                            style="font-size: 0.95rem;">
+                                            🔗 Conectar en la red <span class="fs-5">→</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="contact-card p-3 px-4 rounded-3 border border-secondary border-opacity-25 bg-dark">
+                                    <h4 class="fw-bold text-white mb-2">Correo Electrónico</h4>
+                                    <div class="pt-2 border-top border-secondary border-opacity-25">
+                                        <a href="mailto:sotokevincho@gmail.com"
+                                            class="text-accent text-decoration-none fw-bold"
+                                            style="font-size: 0.95rem;">
+                                            🔗 Enviar un correo <span class="fs-5">→</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="text-center py-4 border-top border-secondary border-opacity-25">
             <div class="container">
-                <a class="navbar-brand fw-bold" href="#">KS</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="#acerca-de-mi">Acerca de Mí</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-                    </ul>
-                </div>
+                <p class="text-secondary mb-0">&copy; 2026 Kevin Soto. Todos los derechos reservados.</p>
             </div>
-        </nav>
-    </header>
+        </footer>
 
-    <main>
-        <!-- SECCIÓN 1: INICIO (Hero) -->
-        <section id="inicio" class="hero-section position-relative d-flex align-items-center vh-100 overflow-hidden">
-            <div class="container position-relative z-1">
-                <div class="row align-items-center">
-
-                    <!-- Textos y CTA -->
-                    <div class="col-lg-6 text-center text-lg-start mb-5 mb-lg-0">
-                        <p class="text-accent mb-1 fs-5">Hola, soy Kevin</p>
-                        <h1 class="display-3 fw-bold mb-3">Desarrollador <br> <span class="text-accent">Full
-                                Stack</span></h1>
-                        <p class="text-secondary fs-5 mb-4 pe-lg-5">
-                            Construyendo soluciones lógicas y eficientes. Apasionado por el código limpio, desde bases
-                            de datos robustas hasta interfaces dinámicas.
-                        </p>
-                        <a href="#proyectos" class="btn btn-success btn-lg px-4 rounded-pill">Ver proyectos en curso</a>
-                    </div>
-
-                    <!-- Silueta -->
-                    <div class="col-lg-6 d-flex justify-content-center">
-                        <div class="hero-image-container">
-                            <!-- Recuerda poner el nombre de tu imagen real aquí -->
-                            <img src="img/imagenportada.png" alt="Kevin Soto - Full Stack Developer"
-                                class="img-fluid silueta-img">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECCIÓN 2: ACERCA DE MÍ -->
-        <section id="acerca-de-mi" class="about-section py-5">
-            <div class="container mt-5">
-                <div class="row align-items-center">
-
-                    <!-- Video Placeholder -->
-                    <div class="col-lg-6 mb-5 mb-lg-0">
-                        <div
-                            class="video-container rounded-4 d-flex flex-column align-items-center justify-content-center shadow-lg">
-                            <div class="play-btn mb-3">▶</div>
-                            <h4 class="fw-bold">Conóceme Mejor</h4>
-                            <p class="text-secondary mb-0">Video de presentación (45s)</p>
-                        </div>
-                    </div>
-
-                    <!-- Texto unificado -->
-                    <div class="col-lg-6 ps-lg-5 text-center text-lg-start">
-                        <h2 class="display-5 fw-bold mb-4">Sobre <span class="text-accent">Mí</span></h2>
-                        <p class="text-secondary fs-5 mb-4">
-                            Soy un desarrollador innovador (perfil ENTP-T) que disfruta resolver problemas complejos y
-                            encontrar la manera más eficiente de estructurar datos e interfaces. Mi enfoque siempre es
-                            la adaptabilidad, el aprendizaje continuo y el trabajo en equipo.
-                        </p>
-                        <p class="text-secondary fs-5 mb-4">
-                            Fuera del código, mantengo mi mente activa con la resolución de puzzles y la creación de
-                            mecanismos de automatización en videojuegos. Esto me ayuda a mantener el pensamiento lógico
-                            y la creatividad al máximo en cada proyecto que asumo.
-                        </p>
-                        <div class="d-flex gap-3 justify-content-center justify-content-lg-start mt-4">
-                            <a href="#contacto" class="btn btn-outline-success rounded-pill px-4">Contactar</a>
-                            <a href="docs/CV_Kevin_Soto_FullStack.pdf" class="btn btn-outline-light rounded-pill px-4">Descargar CV</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECCIÓN 3: PROYECTOS EN CURSO -->
-        <section id="proyectos" class="projects-section py-5">
-            <div class="container mt-5">
-                <h2 class="display-5 fw-bold mb-5 text-center">Proyectos en <span class="text-accent">Curso</span></h2>
-
-                <!-- Cambiamos a col-lg-4 para que quepan 3 tarjetas perfectamente alineadas -->
-                <div class="row g-4 justify-content-center">
-
-                    <!-- Proyecto 1: Cancheros -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card h-100 project-card shadow-lg p-4">
-                            <div class="card-body d-flex flex-column p-0">
-                                <h3 class="card-title fw-bold text-white mb-3">Cancheros</h3>
-                                <p class="card-text text-secondary mb-4">
-                                    Sistema web diseñado para la reserva de canchas sintéticas. Enfocado en la
-                                    estructuración, maquetación e interactividad del frontend y backend en Java.
-                                </p>
-                                <div class="mb-4">
-                                    <span class="badge tech-badge me-1">HTML/CSS/JS</span>
-                                    <span class="badge tech-badge">Spring Boot</span>
-                                </div>
-                                <div class="mt-auto pt-3 border-top border-secondary border-opacity-25">
-                                    <a href="#" target="_blank" class="text-accent text-decoration-none fw-bold"
-                                        style="font-size: 0.95rem;">
-                                        🔗 Ver repositorio <span class="fs-5">→</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Proyecto 2: Parking Master -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card h-100 project-card shadow-lg p-4">
-                            <div class="card-body d-flex flex-column p-0">
-                                <h3 class="card-title fw-bold text-white mb-3">Parking Master</h3>
-                                <p class="card-text text-secondary mb-4">
-                                    Software integral de administración de parqueaderos. Modelado lógico de datos,
-                                    registro de vehículos, y control automatizado de pagos.
-                                </p>
-                                <div class="mb-4">
-                                    <span class="badge tech-badge me-1">Java</span>
-                                    <span class="badge tech-badge me-1">Spring Boot</span>
-                                    <span class="badge tech-badge">PostgreSQL</span>
-                                </div>
-                                <div class="mt-auto pt-3 border-top border-secondary border-opacity-25">
-                                    <a href="#" target="_blank" class="text-accent text-decoration-none fw-bold"
-                                        style="font-size: 0.95rem;">
-                                        🔗 Ver repositorio <span class="fs-5">→</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Proyecto 3: Organizador de Tareas -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card h-100 project-card shadow-lg p-4">
-                            <div class="card-body d-flex flex-column p-0">
-                                <h3 class="card-title fw-bold text-white mb-3">Task Planner</h3>
-                                <p class="card-text text-secondary mb-4">
-                                    Dashboard web personal para gestión de tareas. Cuenta con calendario interactivo,
-                                    filtrado por prioridades y persistencia de datos mediante Local Storage.
-                                </p>
-                                <div class="mb-4">
-                                    <span class="badge tech-badge me-1">JavaScript</span>
-                                    <span class="badge tech-badge me-1">HTML DOM</span>
-                                    <span class="badge tech-badge">CSS</span>
-                                </div>
-                                <div class="mt-auto pt-3 border-top border-secondary border-opacity-25">
-                                    <a href="https://sotokevincho-commits.github.io/proyecto-personal/" target="_blank" class="text-accent text-decoration-none fw-bold"
-                                        style="font-size: 0.95rem;">
-                                        🔗 Ver proyecto desplegado <span class="fs-5">→</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- SECCIÓN 4: EXPERIENCIA Y ESTUDIOS (Línea de tiempo tech) -->
-        <section id="experiencia" class="experience-section py-5">
-            <div class="container mt-5">
-                <h2 class="display-5 fw-bold mb-5 text-center">Trayectoria <span class="text-accent">Profesional</span>
-                </h2>
-
-                <div class="horizontal-timeline-container">
-                    <div class="timeline-track"></div>
-                    <div class="timeline-items">
-
-                        <!-- 2024 -->
-                        <div class="h-timeline-item">
-                            <div class="timeline-node"></div>
-                            <div class="h-timeline-content">
-                                <span class="tech-date">2024 - En curso</span>
-                                <h4 class="fw-bold text-white mb-1">Ingeniería de Sistemas</h4>
-                                <h6 class="text-accent mb-3">Politécnico Grancolombiano</h6>
-                                <p class="text-secondary mb-0">Inicio de mi formación universitaria. Adquisición de
-                                    bases sólidas en ciencias de la computación, arquitectura de software y pensamiento
-                                    algorítmico.</p>
-                            </div>
-                        </div>
-
-                        <!-- 2026 (Doble titulación) -->
-                        <div class="h-timeline-item">
-                            <div class="timeline-node"></div>
-                            <div class="h-timeline-content">
-                                <span class="tech-date">2026 - En curso</span>
-                                <h4 class="fw-bold text-white mb-1">Ing. Ciencia de Datos & ADSO</h4>
-                                <h6 class="text-accent mb-3">Politécnico Grancolombiano | SENA</h6>
-                                <p class="text-secondary mb-0">Para complementar mi perfil en Sistemas, 
-                                    inicié mi segunda carrera profesional enfocada en el modelado de datos, 
-                                    cursada en paralelo con el tecnólogo en Análisis y Desarrollo de Software. 
-                                    Un enfoque dual entre análisis de información y construcción de software.</p>
-                            </div>
-                        </div>
-
-                        <!-- Bootcamp (A punto de terminar) -->
-                        <div class="h-timeline-item">
-                            <div class="timeline-node"></div>
-                            <div class="h-timeline-content">
-                                <span class="tech-date">2026 - Finalizado</span>
-                                <h4 class="fw-bold text-white mb-1">Bootcamp Java Full Stack</h4>
-                                <h6 class="text-accent mb-3">Generation</h6>
-                                <p class="text-secondary mb-0">Inmersión intensiva empresarial. Desarrollo de APIs REST
-                                    con Spring Boot, PostgreSQL, metodologías ágiles e integración frontend.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECCIÓN 5: CONTACTO (Estilo Terminal Tech) -->
-        <section id="contacto" class="contact-section py-5">
-            <div class="container mt-5 mb-5">
-                <h2 class="display-5 fw-bold mb-5 text-center">Inicializar <span class="text-accent">Conexión</span>
-                </h2>
-
-                <div class="row g-4 align-items-center justify-content-center">
-
-                    <!-- Terminal Interactiva (Izquierda) -->
-                    <div class="col-lg-6">
-                        <div class="terminal-window shadow-lg">
-                            <div class="terminal-header d-flex align-items-center px-3">
-                                <span class="dot bg-danger"></span>
-                                <span class="dot bg-warning ms-2"></span>
-                                <span class="dot bg-success ms-2"></span>
-                                <span class="ms-3 text-secondary font-monospace" style="font-size: 0.8rem;">guest@ksoto:
-                                    ~</span>
-                            </div>
-                            <div class="terminal-body p-4 font-monospace">
-                                <p class="mb-2"><span class="text-accent">guest@ksoto</span>:~$ ./contact.sh --status
-                                </p>
-                                <p class="text-secondary mb-3">> Obteniendo información del desarrollador...</p>
-                                <p class="text-info mb-1">{</p>
-                                <p class="ms-3 mb-1 text-white">"disponibilidad": <span
-                                        class="text-success">"Activa"</span>,</p>
-                                <p class="ms-3 mb-1 text-white">"ubicación": <span class="text-warning">"Bogotá,
-                                        Colombia"</span>,</p>
-                                <p class="ms-3 mb-1 text-white">"café_en_sistema": <span
-                                        class="text-warning">"98%"</span></p>
-                                <p class="text-info mb-3">}</p>
-                                <p class="mb-0"><span class="text-accent">guest@ksoto</span>:~$ <span
-                                        class="cursor-blink">_</span></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Enlaces de Contacto (Derecha, estilo tarjetas de proyecto) -->
-                    <div class="col-lg-5">
-                        <div class="d-flex flex-column gap-3">
-
-                            <!-- GitHub -->
-                            <div
-                                class="contact-card p-3 px-4 rounded-3 border border-secondary border-opacity-25 bg-dark">
-                                <h4 class="fw-bold text-white mb-2">GitHub</h4>
-                                <div class="pt-2 border-top border-secondary border-opacity-25">
-                                    <a href="https://github.com/sotokevincho-commits" target="_blank"
-                                        class="text-accent text-decoration-none fw-bold" style="font-size: 0.95rem;">
-                                        🔗 Explorar repositorios <span class="fs-5">→</span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <!-- LinkedIn -->
-                            <div
-                                class="contact-card p-3 px-4 rounded-3 border border-secondary border-opacity-25 bg-dark">
-                                <h4 class="fw-bold text-white mb-2">LinkedIn</h4>
-                                <div class="pt-2 border-top border-secondary border-opacity-25">
-                                    <a href="https://www.linkedin.com/in/kevin-andres-soto-lombana/" target="_blank"
-                                        class="text-accent text-decoration-none fw-bold" style="font-size: 0.95rem;">
-                                        🔗 Conectar en la red <span class="fs-5">→</span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <!-- Correo (Copiar al portapapeles) -->
-                            <div class="contact-card p-3 px-4 rounded-3 border border-secondary border-opacity-25 bg-dark"
-                                style="cursor: pointer;" id="btn-copiar-correo">
-                                <h4 class="fw-bold text-white mb-2">Correo Electrónico</h4>
-                                <div class="pt-2 border-top border-secondary border-opacity-25">
-                                    <span class="text-accent fw-bold" style="font-size: 0.95rem;" id="texto-correo">
-                                        🔗 Copiar dirección de correo <span class="fs-5">→</span>
-                                    </span>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/index.js"></script>
-</body>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/index.js"></script>
+    </body>
 
 </html>
